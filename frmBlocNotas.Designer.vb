@@ -17,9 +17,6 @@ Partial Class frmBlocNotas
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.
-    'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
@@ -64,6 +61,9 @@ Partial Class frmBlocNotas
         ToolStripSeparator3 = New ToolStripSeparator()
         tscbFuente = New ToolStripButton()
         tscbTamano = New ToolStripButton()
+        ToolStripSeparator4 = New ToolStripSeparator()
+        tstxtBuscar = New ToolStripTextBox()
+        tsbBuscar = New ToolStripButton()
         stsInferior = New StatusStrip()
         stsEstado = New ToolStripStatusLabel()
         stsPosicion = New ToolStripStatusLabel()
@@ -272,7 +272,7 @@ Partial Class frmBlocNotas
         ' 
         tsPrincipal.GripStyle = ToolStripGripStyle.Hidden
         tsPrincipal.ImageScalingSize = New Size(24, 24)
-        tsPrincipal.Items.AddRange(New ToolStripItem() {tsbNuevo, tsbAbrir, tsbGuardar, ToolStripSeparator1, tsbCortar, tsbCopiar, tsbPegar, ToolStripSeparator2, tsbNegrita, tsbCursiva, tsbSubrayado, ToolStripSeparator3, tscbFuente, tscbTamano})
+        tsPrincipal.Items.AddRange(New ToolStripItem() {tsbNuevo, tsbAbrir, tsbGuardar, ToolStripSeparator1, tsbCortar, tsbCopiar, tsbPegar, ToolStripSeparator2, tsbNegrita, tsbCursiva, tsbSubrayado, ToolStripSeparator3, tscbFuente, tscbTamano, ToolStripSeparator4, tstxtBuscar, tsbBuscar})
         tsPrincipal.Location = New Point(0, 37)
         tsPrincipal.Name = "tsPrincipal"
         tsPrincipal.Padding = New Padding(0, 0, 3, 0)
@@ -396,6 +396,24 @@ Partial Class frmBlocNotas
         tscbTamano.Name = "tscbTamano"
         tscbTamano.Size = New Size(34, 28)
         tscbTamano.Text = "Tamaño"
+        ' 
+        ' ToolStripSeparator4
+        ' 
+        ToolStripSeparator4.Name = "ToolStripSeparator4"
+        ToolStripSeparator4.Size = New Size(6, 33)
+        ' 
+        ' tstxtBuscar
+        ' 
+        tstxtBuscar.Name = "tstxtBuscar"
+        tstxtBuscar.Size = New Size(150, 33)
+        tstxtBuscar.ToolTipText = "Escriba el texto a buscar y presione Enter"
+        ' 
+        ' tsbBuscar
+        ' 
+        tsbBuscar.DisplayStyle = ToolStripItemDisplayStyle.Text
+        tsbBuscar.Name = "tsbBuscar"
+        tsbBuscar.Size = New Size(60, 28)
+        tsbBuscar.Text = "Buscar"
         ' 
         ' stsInferior
         ' 
@@ -538,6 +556,9 @@ Partial Class frmBlocNotas
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents tscbFuente As ToolStripButton
     Friend WithEvents tscbTamano As ToolStripButton
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents tstxtBuscar As ToolStripTextBox
+    Friend WithEvents tsbBuscar As ToolStripButton
     Friend WithEvents stsEstado As ToolStripStatusLabel
     Friend WithEvents stsPosicion As ToolStripStatusLabel
     Friend WithEvents stsCaracteres As ToolStripStatusLabel
