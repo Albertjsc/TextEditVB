@@ -75,6 +75,7 @@ Partial Class frmBlocNotas
         dlgFuente = New FontDialog()
         dlgColor = New ColorDialog()
         tmrReloj = New Timer(components)
+        ToolStripMenuItem1 = New ToolStripMenuItem()
         mnuPrincipal.SuspendLayout()
         tsPrincipal.SuspendLayout()
         stsInferior.SuspendLayout()
@@ -82,24 +83,27 @@ Partial Class frmBlocNotas
         ' 
         ' cmsTexto
         ' 
+        cmsTexto.ImageScalingSize = New Size(24, 24)
         cmsTexto.Name = "cmsTexto"
         cmsTexto.Size = New Size(61, 4)
         ' 
         ' mnuPrincipal
         ' 
-        mnuPrincipal.Items.AddRange(New ToolStripItem() {ArchivoToolStripMenuItem, EdiciónToolStripMenuItem, FormatoToolStripMenuItem, HerramientasToolStripMenuItem, AyudaToolStripMenuItem})
+        mnuPrincipal.ImageScalingSize = New Size(24, 24)
+        mnuPrincipal.Items.AddRange(New ToolStripItem() {ArchivoToolStripMenuItem, EdiciónToolStripMenuItem, FormatoToolStripMenuItem, HerramientasToolStripMenuItem, AyudaToolStripMenuItem, ToolStripMenuItem1})
         mnuPrincipal.Location = New Point(0, 0)
         mnuPrincipal.Name = "mnuPrincipal"
-        mnuPrincipal.Size = New Size(800, 26)
+        mnuPrincipal.Padding = New Padding(9, 3, 0, 3)
+        mnuPrincipal.Size = New Size(1143, 37)
         mnuPrincipal.TabIndex = 1
         mnuPrincipal.Text = "MenuStrip1"
         ' 
         ' ArchivoToolStripMenuItem
         ' 
         ArchivoToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuNuevo, mnuAbrir, mnuGuardar, mnuGuardarComo, mnuSalir})
-        ArchivoToolStripMenuItem.Font = New Font("Arial", 12F)
+        ArchivoToolStripMenuItem.Font = New Font("Arial", 12.0F)
         ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
-        ArchivoToolStripMenuItem.Size = New Size(72, 22)
+        ArchivoToolStripMenuItem.Size = New Size(106, 31)
         ArchivoToolStripMenuItem.Text = "Archivo"
         ' 
         ' mnuNuevo
@@ -107,7 +111,7 @@ Partial Class frmBlocNotas
         mnuNuevo.Font = New Font("Arial", 9.75F)
         mnuNuevo.Name = "mnuNuevo"
         mnuNuevo.ShortcutKeys = Keys.Control Or Keys.N
-        mnuNuevo.Size = New Size(169, 22)
+        mnuNuevo.Size = New Size(257, 34)
         mnuNuevo.Text = "Nuevo"
         ' 
         ' mnuAbrir
@@ -115,7 +119,7 @@ Partial Class frmBlocNotas
         mnuAbrir.Font = New Font("Arial", 9.75F)
         mnuAbrir.Name = "mnuAbrir"
         mnuAbrir.ShortcutKeys = Keys.Control Or Keys.O
-        mnuAbrir.Size = New Size(169, 22)
+        mnuAbrir.Size = New Size(257, 34)
         mnuAbrir.Text = "Abrir..."
         ' 
         ' mnuGuardar
@@ -123,14 +127,14 @@ Partial Class frmBlocNotas
         mnuGuardar.Font = New Font("Arial", 9.75F)
         mnuGuardar.Name = "mnuGuardar"
         mnuGuardar.ShortcutKeys = Keys.Control Or Keys.S
-        mnuGuardar.Size = New Size(169, 22)
+        mnuGuardar.Size = New Size(257, 34)
         mnuGuardar.Text = "Guardar"
         ' 
         ' mnuGuardarComo
         ' 
         mnuGuardarComo.Font = New Font("Arial", 9.75F)
         mnuGuardarComo.Name = "mnuGuardarComo"
-        mnuGuardarComo.Size = New Size(169, 22)
+        mnuGuardarComo.Size = New Size(257, 34)
         mnuGuardarComo.Text = "Guardar como..."
         ' 
         ' mnuSalir
@@ -138,139 +142,141 @@ Partial Class frmBlocNotas
         mnuSalir.Font = New Font("Arial", 9.75F)
         mnuSalir.Name = "mnuSalir"
         mnuSalir.ShortcutKeys = Keys.Alt Or Keys.F4
-        mnuSalir.Size = New Size(169, 22)
+        mnuSalir.Size = New Size(257, 34)
         mnuSalir.Text = "Salir"
         ' 
         ' EdiciónToolStripMenuItem
         ' 
         EdiciónToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuDeshacer, mnuRehacer, mnuCortar, mnuCopiar, mnuPegar, mnuSeleccionarTodo})
-        EdiciónToolStripMenuItem.Font = New Font("Arial", 12F)
+        EdiciónToolStripMenuItem.Font = New Font("Arial", 12.0F)
         EdiciónToolStripMenuItem.Name = "EdiciónToolStripMenuItem"
-        EdiciónToolStripMenuItem.Size = New Size(73, 22)
+        EdiciónToolStripMenuItem.Size = New Size(107, 31)
         EdiciónToolStripMenuItem.Text = "Edición"
         ' 
         ' mnuDeshacer
         ' 
         mnuDeshacer.Font = New Font("Arial", 9.75F)
         mnuDeshacer.Name = "mnuDeshacer"
-        mnuDeshacer.Size = New Size(174, 22)
+        mnuDeshacer.Size = New Size(263, 34)
         mnuDeshacer.Text = "Deshacer"
         ' 
         ' mnuRehacer
         ' 
         mnuRehacer.Font = New Font("Arial", 9.75F)
         mnuRehacer.Name = "mnuRehacer"
-        mnuRehacer.Size = New Size(174, 22)
+        mnuRehacer.Size = New Size(263, 34)
         mnuRehacer.Text = "Rehacer"
         ' 
         ' mnuCortar
         ' 
         mnuCortar.Font = New Font("Arial", 9.75F)
         mnuCortar.Name = "mnuCortar"
-        mnuCortar.Size = New Size(174, 22)
+        mnuCortar.Size = New Size(263, 34)
         mnuCortar.Text = "Cortar"
         ' 
         ' mnuCopiar
         ' 
         mnuCopiar.Font = New Font("Arial", 9.75F)
         mnuCopiar.Name = "mnuCopiar"
-        mnuCopiar.Size = New Size(174, 22)
+        mnuCopiar.Size = New Size(263, 34)
         mnuCopiar.Text = "Copiar"
         ' 
         ' mnuPegar
         ' 
         mnuPegar.Font = New Font("Arial", 9.75F)
         mnuPegar.Name = "mnuPegar"
-        mnuPegar.Size = New Size(174, 22)
+        mnuPegar.Size = New Size(263, 34)
         mnuPegar.Text = "Pegar"
         ' 
         ' mnuSeleccionarTodo
         ' 
         mnuSeleccionarTodo.Font = New Font("Arial", 9.75F)
         mnuSeleccionarTodo.Name = "mnuSeleccionarTodo"
-        mnuSeleccionarTodo.Size = New Size(174, 22)
+        mnuSeleccionarTodo.Size = New Size(263, 34)
         mnuSeleccionarTodo.Text = "Seleccionar Todo"
         ' 
         ' FormatoToolStripMenuItem
         ' 
         FormatoToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuFuente, mnuColor, mnuAjusteLinea})
-        FormatoToolStripMenuItem.Font = New Font("Arial", 12F)
+        FormatoToolStripMenuItem.Font = New Font("Arial", 12.0F)
         FormatoToolStripMenuItem.Name = "FormatoToolStripMenuItem"
-        FormatoToolStripMenuItem.Size = New Size(79, 22)
+        FormatoToolStripMenuItem.Size = New Size(117, 31)
         FormatoToolStripMenuItem.Text = "Formato"
         ' 
         ' mnuFuente
         ' 
         mnuFuente.Font = New Font("Arial", 9.75F)
         mnuFuente.Name = "mnuFuente"
-        mnuFuente.Size = New Size(162, 22)
+        mnuFuente.Size = New Size(247, 34)
         mnuFuente.Text = "Fuente"
         ' 
         ' mnuColor
         ' 
         mnuColor.Font = New Font("Arial", 9.75F)
         mnuColor.Name = "mnuColor"
-        mnuColor.Size = New Size(162, 22)
+        mnuColor.Size = New Size(247, 34)
         mnuColor.Text = "Color de fuente"
         ' 
         ' mnuAjusteLinea
         ' 
         mnuAjusteLinea.Font = New Font("Arial", 9.75F)
         mnuAjusteLinea.Name = "mnuAjusteLinea"
-        mnuAjusteLinea.Size = New Size(162, 22)
+        mnuAjusteLinea.Size = New Size(247, 34)
         mnuAjusteLinea.Text = "Ajuste de linea"
         ' 
         ' HerramientasToolStripMenuItem
         ' 
         HerramientasToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuBuscar, mnuContarPalabras, mnuContarCaracteres})
-        HerramientasToolStripMenuItem.Font = New Font("Arial", 12F)
+        HerramientasToolStripMenuItem.Font = New Font("Arial", 12.0F)
         HerramientasToolStripMenuItem.Name = "HerramientasToolStripMenuItem"
-        HerramientasToolStripMenuItem.Size = New Size(114, 22)
+        HerramientasToolStripMenuItem.Size = New Size(171, 31)
         HerramientasToolStripMenuItem.Text = "Herramientas"
         ' 
         ' mnuBuscar
         ' 
         mnuBuscar.Font = New Font("Arial", 9.75F)
         mnuBuscar.Name = "mnuBuscar"
-        mnuBuscar.Size = New Size(178, 22)
+        mnuBuscar.Size = New Size(271, 34)
         mnuBuscar.Text = "Buscar"
         ' 
         ' mnuContarPalabras
         ' 
         mnuContarPalabras.Font = New Font("Arial", 9.75F)
         mnuContarPalabras.Name = "mnuContarPalabras"
-        mnuContarPalabras.Size = New Size(178, 22)
+        mnuContarPalabras.Size = New Size(271, 34)
         mnuContarPalabras.Text = "Contar palabras"
         ' 
         ' mnuContarCaracteres
         ' 
         mnuContarCaracteres.Font = New Font("Arial", 9.75F)
         mnuContarCaracteres.Name = "mnuContarCaracteres"
-        mnuContarCaracteres.Size = New Size(178, 22)
+        mnuContarCaracteres.Size = New Size(271, 34)
         mnuContarCaracteres.Text = "Contar caracteres"
         ' 
         ' AyudaToolStripMenuItem
         ' 
         AyudaToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {mnuAcercaDe})
-        AyudaToolStripMenuItem.Font = New Font("Arial", 12F)
+        AyudaToolStripMenuItem.Font = New Font("Arial", 12.0F)
         AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        AyudaToolStripMenuItem.Size = New Size(64, 22)
+        AyudaToolStripMenuItem.Size = New Size(96, 31)
         AyudaToolStripMenuItem.Text = "Ayuda"
         ' 
         ' mnuAcercaDe
         ' 
-        mnuAcercaDe.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        mnuAcercaDe.Font = New Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0)
         mnuAcercaDe.Name = "mnuAcercaDe"
-        mnuAcercaDe.Size = New Size(146, 22)
+        mnuAcercaDe.Size = New Size(220, 34)
         mnuAcercaDe.Text = "Acerca de..."
         ' 
         ' tsPrincipal
         ' 
         tsPrincipal.GripStyle = ToolStripGripStyle.Hidden
+        tsPrincipal.ImageScalingSize = New Size(24, 24)
         tsPrincipal.Items.AddRange(New ToolStripItem() {tsbNuevo, tsbAbrir, tsbGuardar, ToolStripSeparator1, tsbCortar, tsbCopiar, tsbPegar, ToolStripSeparator2, tsbNegrita, tsbCursiva, tsbSubrayado, ToolStripSeparator3, tscbFuente, tscbTamano})
-        tsPrincipal.Location = New Point(0, 26)
+        tsPrincipal.Location = New Point(0, 37)
         tsPrincipal.Name = "tsPrincipal"
-        tsPrincipal.Size = New Size(800, 25)
+        tsPrincipal.Padding = New Padding(0, 0, 3, 0)
+        tsPrincipal.Size = New Size(1143, 33)
         tsPrincipal.TabIndex = 2
         tsPrincipal.Text = "ToolStrip1"
         ' 
@@ -280,7 +286,7 @@ Partial Class frmBlocNotas
         tsbNuevo.Image = CType(resources.GetObject("tsbNuevo.Image"), Image)
         tsbNuevo.ImageTransparentColor = Color.Magenta
         tsbNuevo.Name = "tsbNuevo"
-        tsbNuevo.Size = New Size(23, 22)
+        tsbNuevo.Size = New Size(34, 28)
         tsbNuevo.Text = "Nuevo"
         ' 
         ' tsbAbrir
@@ -289,7 +295,7 @@ Partial Class frmBlocNotas
         tsbAbrir.Image = CType(resources.GetObject("tsbAbrir.Image"), Image)
         tsbAbrir.ImageTransparentColor = Color.Magenta
         tsbAbrir.Name = "tsbAbrir"
-        tsbAbrir.Size = New Size(23, 22)
+        tsbAbrir.Size = New Size(34, 28)
         tsbAbrir.Text = "Abrir"
         ' 
         ' tsbGuardar
@@ -298,13 +304,13 @@ Partial Class frmBlocNotas
         tsbGuardar.Image = CType(resources.GetObject("tsbGuardar.Image"), Image)
         tsbGuardar.ImageTransparentColor = Color.Magenta
         tsbGuardar.Name = "tsbGuardar"
-        tsbGuardar.Size = New Size(23, 22)
+        tsbGuardar.Size = New Size(34, 28)
         tsbGuardar.Text = "Guardar"
         ' 
         ' ToolStripSeparator1
         ' 
         ToolStripSeparator1.Name = "ToolStripSeparator1"
-        ToolStripSeparator1.Size = New Size(6, 25)
+        ToolStripSeparator1.Size = New Size(6, 33)
         ' 
         ' tsbCortar
         ' 
@@ -312,7 +318,7 @@ Partial Class frmBlocNotas
         tsbCortar.Image = CType(resources.GetObject("tsbCortar.Image"), Image)
         tsbCortar.ImageTransparentColor = Color.Magenta
         tsbCortar.Name = "tsbCortar"
-        tsbCortar.Size = New Size(23, 22)
+        tsbCortar.Size = New Size(34, 28)
         tsbCortar.Text = "Cortar"
         ' 
         ' tsbCopiar
@@ -321,7 +327,7 @@ Partial Class frmBlocNotas
         tsbCopiar.Image = CType(resources.GetObject("tsbCopiar.Image"), Image)
         tsbCopiar.ImageTransparentColor = Color.Magenta
         tsbCopiar.Name = "tsbCopiar"
-        tsbCopiar.Size = New Size(23, 22)
+        tsbCopiar.Size = New Size(34, 28)
         tsbCopiar.Text = "Copiar"
         ' 
         ' tsbPegar
@@ -330,13 +336,13 @@ Partial Class frmBlocNotas
         tsbPegar.Image = CType(resources.GetObject("tsbPegar.Image"), Image)
         tsbPegar.ImageTransparentColor = Color.Magenta
         tsbPegar.Name = "tsbPegar"
-        tsbPegar.Size = New Size(23, 22)
+        tsbPegar.Size = New Size(34, 28)
         tsbPegar.Text = "Pegar"
         ' 
         ' ToolStripSeparator2
         ' 
         ToolStripSeparator2.Name = "ToolStripSeparator2"
-        ToolStripSeparator2.Size = New Size(6, 25)
+        ToolStripSeparator2.Size = New Size(6, 33)
         ' 
         ' tsbNegrita
         ' 
@@ -345,7 +351,7 @@ Partial Class frmBlocNotas
         tsbNegrita.Image = CType(resources.GetObject("tsbNegrita.Image"), Image)
         tsbNegrita.ImageTransparentColor = Color.Magenta
         tsbNegrita.Name = "tsbNegrita"
-        tsbNegrita.Size = New Size(23, 22)
+        tsbNegrita.Size = New Size(34, 28)
         tsbNegrita.Text = "Negrita"
         ' 
         ' tsbCursiva
@@ -355,7 +361,7 @@ Partial Class frmBlocNotas
         tsbCursiva.Image = CType(resources.GetObject("tsbCursiva.Image"), Image)
         tsbCursiva.ImageTransparentColor = Color.Magenta
         tsbCursiva.Name = "tsbCursiva"
-        tsbCursiva.Size = New Size(23, 22)
+        tsbCursiva.Size = New Size(34, 28)
         tsbCursiva.Text = "Cursiva"
         ' 
         ' tsbSubrayado
@@ -365,13 +371,13 @@ Partial Class frmBlocNotas
         tsbSubrayado.Image = CType(resources.GetObject("tsbSubrayado.Image"), Image)
         tsbSubrayado.ImageTransparentColor = Color.Magenta
         tsbSubrayado.Name = "tsbSubrayado"
-        tsbSubrayado.Size = New Size(23, 22)
+        tsbSubrayado.Size = New Size(34, 28)
         tsbSubrayado.Text = "Subrayado"
         ' 
         ' ToolStripSeparator3
         ' 
         ToolStripSeparator3.Name = "ToolStripSeparator3"
-        ToolStripSeparator3.Size = New Size(6, 25)
+        ToolStripSeparator3.Size = New Size(6, 33)
         ' 
         ' tscbFuente
         ' 
@@ -379,7 +385,7 @@ Partial Class frmBlocNotas
         tscbFuente.Image = CType(resources.GetObject("tscbFuente.Image"), Image)
         tscbFuente.ImageTransparentColor = Color.Magenta
         tscbFuente.Name = "tscbFuente"
-        tscbFuente.Size = New Size(23, 22)
+        tscbFuente.Size = New Size(34, 28)
         tscbFuente.Text = "Fuente"
         ' 
         ' tscbTamano
@@ -388,50 +394,53 @@ Partial Class frmBlocNotas
         tscbTamano.Image = CType(resources.GetObject("tscbTamano.Image"), Image)
         tscbTamano.ImageTransparentColor = Color.Magenta
         tscbTamano.Name = "tscbTamano"
-        tscbTamano.Size = New Size(23, 22)
+        tscbTamano.Size = New Size(34, 28)
         tscbTamano.Text = "Tamaño"
         ' 
         ' stsInferior
         ' 
+        stsInferior.ImageScalingSize = New Size(24, 24)
         stsInferior.Items.AddRange(New ToolStripItem() {stsEstado, stsPosicion, stsCaracteres, stsPalabras})
-        stsInferior.Location = New Point(0, 428)
+        stsInferior.Location = New Point(0, 718)
         stsInferior.Name = "stsInferior"
-        stsInferior.Size = New Size(800, 22)
+        stsInferior.Padding = New Padding(1, 0, 20, 0)
+        stsInferior.Size = New Size(1143, 32)
         stsInferior.TabIndex = 3
         stsInferior.Text = "StatusStrip1"
         ' 
         ' stsEstado
         ' 
         stsEstado.Name = "stsEstado"
-        stsEstado.Size = New Size(537, 17)
+        stsEstado.Size = New Size(748, 25)
         stsEstado.Spring = True
         stsEstado.Text = "Listo"
         ' 
         ' stsPosicion
         ' 
         stsPosicion.Name = "stsPosicion"
-        stsPosicion.Size = New Size(111, 17)
+        stsPosicion.Size = New Size(166, 25)
         stsPosicion.Text = "Linea: 1 Columna: 1"
         ' 
         ' stsCaracteres
         ' 
         stsCaracteres.Name = "stsCaracteres"
-        stsCaracteres.Size = New Size(74, 17)
+        stsCaracteres.Size = New Size(112, 25)
         stsCaracteres.Text = "Caracteres: 0"
         ' 
         ' stsPalabras
         ' 
         stsPalabras.Name = "stsPalabras"
-        stsPalabras.Size = New Size(63, 17)
+        stsPalabras.Size = New Size(96, 25)
         stsPalabras.Text = "Palabras: 0"
         ' 
         ' rtbDocumento
         ' 
         rtbDocumento.Dock = DockStyle.Fill
-        rtbDocumento.Font = New Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        rtbDocumento.Location = New Point(0, 51)
+        rtbDocumento.Font = New Font("Arial", 12.0F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        rtbDocumento.Location = New Point(0, 70)
+        rtbDocumento.Margin = New Padding(4, 5, 4, 5)
         rtbDocumento.Name = "rtbDocumento"
-        rtbDocumento.Size = New Size(800, 377)
+        rtbDocumento.Size = New Size(1143, 648)
         rtbDocumento.TabIndex = 4
         rtbDocumento.Text = ""
         ' 
@@ -452,17 +461,23 @@ Partial Class frmBlocNotas
         tmrReloj.Enabled = True
         tmrReloj.Interval = 1000
         ' 
+        ' ToolStripMenuItem1
+        ' 
+        ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        ToolStripMenuItem1.Size = New Size(182, 31)
+        ' 
         ' frmBlocNotas
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(1143, 750)
         Controls.Add(rtbDocumento)
         Controls.Add(stsInferior)
         Controls.Add(tsPrincipal)
         Controls.Add(mnuPrincipal)
         MainMenuStrip = mnuPrincipal
-        MinimumSize = New Size(600, 400)
+        Margin = New Padding(4, 5, 4, 5)
+        MinimumSize = New Size(848, 629)
         Name = "frmBlocNotas"
         StartPosition = FormStartPosition.CenterScreen
         Text = "TextEdit VB"
@@ -527,5 +542,6 @@ Partial Class frmBlocNotas
     Friend WithEvents stsPosicion As ToolStripStatusLabel
     Friend WithEvents stsCaracteres As ToolStripStatusLabel
     Friend WithEvents stsPalabras As ToolStripStatusLabel
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 
 End Class
