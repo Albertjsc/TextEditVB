@@ -378,10 +378,10 @@ Public Class frmBlocNotas
     ' Menú Ayuda
     ' ============================================================
     Private Sub mnuAcercaDe_Click(sender As Object, e As EventArgs) Handles mnuAcercaDe.Click
-        MessageBox.Show("TextEdit VB" & vbCrLf &
-                         "Editor de texto desarrollado en Visual Basic .NET" & vbCrLf &
-                         "Proyecto de curso - Programación de Aplicaciones de Escritorio",
-                         "Acerca de TextEdit VB", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("Autores" & vbCrLf &
+                         "Royman Leeroy Martinez Herrera " & vbCrLf &
+                         "Albert Jered Sobalvarro Chavarria",
+                         "UNIVERSIDAD NACIONAL DE INGENIERÍA C.SANDINO", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
 End Class
